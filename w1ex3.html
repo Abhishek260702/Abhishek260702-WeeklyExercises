@@ -1,0 +1,55 @@
+<!-- <p>Exercise 3, Functions:</p>
+     <p>Create a page with a button and three input boxes, labelled a, b and n</p>
+     <p>When the user clicks, </p>
+     <p>
+         <p>Create a function to return the sum of all the multiples of a or b below n</p>
+         <p>Call the function and alert the user to the correct answer when they press the button.</p>
+ </p> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOCUMENT</title>
+</head>
+
+<body>
+    <h2>return sum of a and b below n</h2>
+    <div>
+        <form>
+            <label for="numberone">
+                <input type="number" placeholder="number1" name="number" id="numberone">A
+            </label> <br>
+            <label for="numbertwo">
+                <input type="number" placeholder="number2" name="number" id="numbertwo">B
+            </label> <br>
+            <label for="numberthree">
+                <input type="number" placeholder="number3" name="number" id="numberthree">C
+            </label>
+        </form>
+    </div>
+
+    <button type="button" onclick="calculatesum()">calculate</button>
+
+    <script>
+        function calculatesum() {
+            let numberone = parseInt(document.getElementById("numberone").value);
+            let numbertwo = parseInt(document.getElementById("numbertwo").value);
+            let numberthree = parseInt(document.getElementById("numberthree").value);
+
+
+
+            let sum = 0;
+            for (let i = 0; i < numberthree; i++) {
+                if (i % numberone === 0 || i % numbertwo === 0) {
+                    sum += i;
+                }
+            }
+            alert("the sum is " + sum);
+        }
+
+    </script>
+
+</body>
