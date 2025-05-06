@@ -1,0 +1,52 @@
+<!-- <p>Exercise 4, Arrays: f4 should take 2 integer and 1 array parameters and return an integer.</p>
+ <p>Create a function f4 to return the sum of all the multiples of a or b in array l</p>
+ <p>(Exercise 4.1) Create a page with a button and three input boxes, labelled a, b and l, l should be a large input</p>
+ <p>Call the function f4 in the function called by onClick, and alert the user to the 
+     returned answer when they press the button.</p>         -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Multiples checker</title>
+</head>
+
+<body>
+    <h1>multiples Checker</h1>
+
+    <label>Enter value for a: </label>
+    <input type="number" id="a"><br>
+    <br>
+    <label>Enter value for b: </label>
+    <input type="number" id="b"><br>
+    <br>
+    <label>Enter array values separated by commas: </label>
+    <input type="text" id="l"><br>
+    <br>
+    <button onclick="f4()">Press me!</button>
+
+    <script>
+        function f4() {
+            let a = parseInt(document.getElementById("a").value);
+            let b = parseInt(document.getElementById("b").value);
+            let l = document.getElementById("l").value.split(",");
+
+            let sum = 0;
+
+            // Loop through the array
+            for (let i = 0; i < l.length; i++) {
+                // Convert each element to a number (after trimming spaces)
+                let l1 = parseInt(l[i].trim());
+
+                // Check if it's a multiple of a or b
+                if (l1 % a === 0 || l1 % b === 0) {
+                    sum = sum + l1; // Add to sum
+                }
+            }
+
+            alert("The sum of multiples of " + a + " or " + b + " is: " + sum);
+        }
+    </script>
+</body>
+
+</html>
