@@ -1,0 +1,33 @@
+<!-- <p>Exercise 1:</p>
+        <p>Create a function and button which allows a user to enter baggage weight and alerts them if 
+        the baggage exceeds the allowance of 15kg</p> -->
+
+        <!DOCTYPE html> 
+        <html lang="en">
+        
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Baggage weight checker</title>
+        </head>
+        
+        <body>
+            <h2>Please enter your baggage weight</h2>
+            <input type="number" id="BaggageWeight" placeholder="please enter the weight in kg" />
+            <button type="button" onclick="checkWeight()"> check Weight</button>
+        
+            <script>
+                function checkWeight() {
+                    const weight = document.getElementById("BaggageWeight").value;
+                    if (weight > 15) {
+                        alert("baggage weight exceeds 15kg")
+                    } else {
+                        alert("baggage weight is under 15kg")
+                    }
+        
+                }
+            </script>
+        
+        </body>
+        
+        </html>
