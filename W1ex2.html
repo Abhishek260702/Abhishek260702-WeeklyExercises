@@ -1,0 +1,34 @@
+<!-- <p>Exercise 2:</p>
+    <p>Create a page with a button</p>
+    <p>When the user clicks, </p>
+    <p> -->
+        <!-- <p>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9.
+             The sum of these multiples is 23.</p>
+        <p>Find the sum of all the multiples of 3 or 5 below 1000 and alert the user to the correct answer.</p> -->
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>3or5</title>
+        </head>
+        <body>
+            <h2> sum of all the multiples of 3 or 5 below 1000  </h2>
+            <button type="button" onclick="findsum()">findsum</button>
+            <script>
+        
+        function findsum(){
+            let sum=0;
+            for(let i = 0 ; i < 1000 ; i ++  ){
+                if (i % 3 === 0 || i % 5 ===0){
+                    sum+=i;
+                }
+            }
+            alert("the sum is "+ sum)
+            // alert("the sum is "+ sum)
+        }
+        
+            </script>
+        </body>
+        </html>
