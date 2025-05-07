@@ -20,7 +20,7 @@
     <label>Enter value for b: </label>
     <input type="number" id="b"><br>
     <br>
-    <label>Enter array values separated by commas: </label>
+    <label>Enter values separated by commas: </label>
     <input type="text" id="l"><br>
     <br>
     <button onclick="f4()">Press me!</button>
@@ -33,18 +33,18 @@
 
             let sum = 0;
 
-            // Loop through the array
+           
             for (let i = 0; i < l.length; i++) {
-                // Convert each element to a number (after trimming spaces)
+                
                 let l1 = parseInt(l[i].trim());
 
-                // Check if it's a multiple of a or b
+                
                 if (l1 % a === 0 || l1 % b === 0) {
-                    sum = sum + l1; // Add to sum
+                    sum = sum + l1; 
                 }
             }
 
-            alert("The sum of multiples of " + a + " or " + b + " is: " + sum);
+            alert("The sum of multiples of a and b is : " + sum);
         }
     </script>
 </body>
