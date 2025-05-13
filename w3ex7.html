@@ -1,0 +1,59 @@
+<!-- <p>Exercise 7, Objects as dictionaries/hashtables:</p>
+<p>Create a function, f7, that takes two parameters, basket and prices</p>
+<p>f7 should compute the cost of the basket given the prices supplied.</p>
+<p>basket should be an object holding product:quantity (string:int) pairs</p>
+<p>prices should be an object holding product:price (string:float) pairs</p>
+
+<p>==7.1==</p>
+<p>Create a testing page for the function f7</p> -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ex7</title>
+</head>
+
+<body>
+    <h1>Basket cost calculator</h1>
+    <div id="output"></div>
+    <script>
+
+        function f7(basket, prices) {
+
+            let sum = 0;
+            for (let i in prices) {
+                let ans = basket[i] * prices[i];
+                sum += ans;
+
+            }
+            return sum;
+
+        }
+
+        function clicks() {
+            const basket = {
+                "eggs": 10,
+                "chicken": 10,
+                "rice": 10
+            };
+
+            const prices = {
+                "eggs": 1,
+                "chicken": 2,
+                "rice": 3
+            };
+
+            const answer = f7(basket, prices);
+            alert("Your answer is" + answer);
+
+
+        }
+
+
+    </script>
+    <button onclick="clicks()">Call Me</button>
+
+</body>
+
+</html>
